@@ -11,6 +11,9 @@ end
 group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
+  
+  # Use pry-rails instead of rails console
+  gem 'pry-rails'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
@@ -20,10 +23,15 @@ group :development do
 end
 
 group :development, :test do
+  # Use RSpec for testing
+  gem 'rspec-rails', '~> 3.0'
+  
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
 
+# Use bootstrap for style
+gem 'bootstrap-sass'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
