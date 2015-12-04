@@ -30,6 +30,8 @@ group :development, :test do
   gem 'byebug'
 end
 
+# Use devise for authentication
+gem 'devise'
 # Use Figaro to store environment variables
 gem 'figaro', '1.0'
 # Use bootstrap for style
