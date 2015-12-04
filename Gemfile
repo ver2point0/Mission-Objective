@@ -30,6 +30,8 @@ group :development, :test do
   gem 'byebug'
 end
 
+# Use Figaro to store environment variables
+gem 'figaro', '1.0'
 # Use bootstrap for style
 gem 'bootstrap-sass'
 # Use SCSS for stylesheets
