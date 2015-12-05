@@ -10,25 +10,25 @@
 <body>
 
 <div class="container">
-    <ul class="nav nav-tabs divider-color">
-      <li><%= link_to "M|O Mission Objective", root_path %></li>
-      <div class="pull-right user-in-out">
-        <% if user_signed_in? %>
-          Signed in as: <strong><%= current_user.username %></strong> || 
-          <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-info" %> || 
-          <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
-        <% else %>
-          <%= link_to "Sign in", new_user_session_path, class: "btn accent-color text-primary-color" %> ||
-          <%= link_to "Sign up", new_user_registration_path, class: "btn default-primary-color text-primary-color" %>
-        <% end %>
-      </div>
-    </ul>
+  <ul class="nav nav-tabs divider-color">
+    <li><%= link_to "M|O Mission Objective", root_path %></li>
+    <div class="pull-right user-in-out">
+      <% if user_signed_in? %>
+        Signed in as: <strong><%= current_user.username %></strong> || 
+        <%= link_to "Edit profile", edit_user_registration_path, class: "btn btn-info" %> || 
+        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-default" %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path, class: "btn accent-color text-primary-color" %> ||
+        <%= link_to "Sign up", new_user_registration_path, class: "btn default-primary-color text-primary-color" %>
+      <% end %>
+    </div>
+  </ul>
     
-  <% if notice %>
-      <p class="notice"><%= notice %></p>
-    <% elsif alert %>
-      <p class="alert"><%= alert %></p>
-    <% end %>
+  <%# if flash.any? %>
+    <p class="notice"><%= flash[:notice] %></p>
+    <p class="alert"><%= flash[:alert] %></p>
+    <p class="error"><%= flash[:error] %></p>
+  <%# end %>
     
   <%= yield %>
   

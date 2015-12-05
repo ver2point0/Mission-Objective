@@ -16,6 +16,7 @@
         <div class="panel-body">
           <form role="role">       
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
               <div class="form-group">
                 <%= f.label :email %><br />
                 <%= f.email_field :email, autofocus: true, class: "form-control" %>
