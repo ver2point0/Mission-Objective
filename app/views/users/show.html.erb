@@ -1,3 +1,44 @@
-<strong><%= current_user.username %></strong>
-      
-<p>This is your user profile to complete you weekly objectives.</p>
+<div class="container-fluid">
+    <div class="row">
+        
+        <!-- user profile column -->
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading text-center">
+                    <% if user_signed_in? %>
+                        <strong>Welcome, <%= current_user.username %>!</strong>
+                    <% end %>
+                </div>
+                
+                <p></p>
+                
+                <div class="panel-body">
+                    <img src="https://cloud.githubusercontent.com/assets/12492121/11578560/c8f29430-99f4-11e5-96e9-0787f238fc77.png" 
+                    class="img-thumbnail img-responsive" alt="User image" width="375">
+                    <p></p>
+                    <p>Complete your weekly objectives using the panel to the right.</p>
+                    <p>1. Type an objecitve description.</p>
+                    <p>2. Press <b>add</b> to add a new objecitve.</p>
+                    <p>3. Press <b>edit</b> to edit an existing objective.</p>
+                    <p>4. Press <b>complete</b> to mark an objective complete.</p>
+                    <p>5. Press <b>delete</b> to delete an existing objective.</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- user objectives column -->
+        <div class="col-md-7">
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">
+                    <strong>Objectives</strong>
+                </div>
+                
+                <p></p>
+                
+            </div>
+        </div>
+        
+    </div>
+</div>
+
