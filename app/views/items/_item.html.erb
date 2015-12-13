@@ -1,5 +1,23 @@
-<div class="media">
-   <div class="media-body">
-       <%= item.name %>
-   </div>
+<div class="table-responsive">
+   <table class="table table-hover">
+      <thead>
+         <th>Description</th>
+         <th># days left</th>
+         <th>Objective actions</th>
+      </thead>
+      <tbody>
+         <% current_user.items.each do |item| %>
+         <tr>
+            <td><%= item.name %></td>
+            <td>days</td>
+            <td>
+               <div class="btn-group">
+                  <button type="button" class="btn btn-success">Complete</button>
+                  <button type="button" class="btn btn-danger">Delete</button>
+               </div>
+            </td>
+         </tr>
+         <% end %>
+      </tbody>
+   </table>
 </div>

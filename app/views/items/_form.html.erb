@@ -1,7 +1,9 @@
 <%= form_for [user, item] do |f| %>
     <div class="form-group">
-        <%= f.label :name, class: 'sr-only' %>
-        <%= f.text_field :name, class: 'form-control', placeholder: "Enter a new objective" %>
+        <%= f.label :name %> <br />
+        <%= f.text_field :name, class: 'form-control', placeholder: "Enter a new objective name" %>
     </div>
-    <%= f.submit "Add new objective", class: 'btn btn-success' %>
+    <div class="actions">
+        <%= f.submit "Add objective", class: 'btn btn-success btn-block' %>
+    </div>
 <% end %>

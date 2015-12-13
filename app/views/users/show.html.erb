@@ -16,6 +16,7 @@
                     <img src="https://cloud.githubusercontent.com/assets/12492121/11578560/c8f29430-99f4-11e5-96e9-0787f238fc77.png" 
                     class="img-thumbnail img-responsive" alt="User image" width="375">
                     <p></p>
+                    <p><%= current_user.items.count %> objectives</p>
                     <p>Complete your weekly objectives using the panel to the right.</p>
                     <p>1. Type an objecitve description.</p>
                     <p>2. Press <b>add</b> to add a new objecitve.</p>
@@ -35,16 +36,22 @@
                 </div>
                 
                 <p></p>
-                <div class="row">
-                    <%= render partial: 'items/form', locals: {user: current_user, item: @item} %>
-                </div>
                 
-                <div class="row">
-                    <%= render current_user.items %>
+                <div class="panel-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <%= render partial: 'items/form', locals: {user: current_user, item: @item} %>
+                        </div>
+                        
+                        <hr class="divider-color">
+                        
+                        <div class="row">
+                            <strong>Current Objectives</strong>
+                            <%= render partial: 'items/item' %>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        
     </div>
 </div>
-
