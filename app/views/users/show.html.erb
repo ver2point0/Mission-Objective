@@ -35,7 +35,13 @@
                 </div>
                 
                 <p></p>
+                <div class="row">
+                    <%= render partial: 'items/form', locals: {user: current_user, item: @item} %>
+                </div>
                 
+                <div class="row">
+                    <%= render current_user.items %>
+                </div>
             </div>
         </div>
         
