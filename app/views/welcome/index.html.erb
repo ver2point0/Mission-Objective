@@ -1,26 +1,10 @@
-<div class="container-fluid">
-  <div class="row">
-    
-    <!--blank left column-->
-    <div class="col-md-3">
-    </div>
-    
-    <!--content column-->
-    <div class="col-md-6 dark-primary-color">
-      <div class="text-primary-color">
-        <h1>Mission Objective</h1>
-        <p>You have 7 days to complete your objectives.</p>
-        <p>Incomplete objectives are terminated.</p>
-        <p><strong>Failure</strong> is not an option!</p>
-        <div class="row">
-          <img src="https://cloud.githubusercontent.com/assets/12492121/11578560/c8f29430-99f4-11e5-96e9-0787f238fc77.png" class="img-responsive">
-        </div>
-      </div>
-    </div>
-      
-    <!--blank right column-->
-    <div class="col-md-3">
-    </div>
-      
-  </div>
+<div class="jumbotron">
+  <h1>Mission Objective</h1>
+  <p>You have 7 days to complete your objectives.</p>
+  <p>Incomplete objectives are terminated.</p>
+  <p><strong>Failure</strong> is not an option!</p>
+  <p>
+    <%= link_to "Continue", new_user_session_path, class: "btn btn-success btn-text-size" %> or
+    <%= link_to "Get Started", new_user_registration_path, class: "btn btn-warning btn-text-size" %> 
+  </p>
 </div>
