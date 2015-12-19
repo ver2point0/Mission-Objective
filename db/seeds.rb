@@ -29,7 +29,7 @@ require 'faker'
 end
 
 user = User.first
-user.update_attributes(password: "helloworld", password_confirmation: "helloworld")
+user.update_attributes(username: Faker::Name.name, email: Faker::Internet.email, password: "helloworld", password_confirmation: "helloworld")
 user.skip_confirmation!
 user.save
 
