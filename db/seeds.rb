@@ -29,7 +29,7 @@ require 'faker'
 end
 
 user = User.first
-user.update_attributes(email: "jmci10@hotmail.com", password: "helloworld", password_confirmation: "helloworld")
+user.update_attributes(password: "helloworld", password_confirmation: "helloworld")
 user.skip_confirmation!
 user.save
 
