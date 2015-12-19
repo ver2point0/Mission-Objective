@@ -12,7 +12,7 @@ require 'faker'
 5.times do
   password = Faker::Internet.password
   user = User.new(
-    username: Faker::Name.title,
+    username: Faker::Name.name,
     email: Faker::Internet.email,
     password: password,
     password_confirmation: password)
@@ -23,13 +23,13 @@ require 'faker'
   5.times do
     item = Item.create!(
       user: user,
-      name: Faker::Lorem.word)
+      name: Faker::Name.title)
     item.update_attribute(:created_at, Time.now - rand(600..606461))
   end
 end
 
 user = User.first
-user.update_attributes(username: Faker::Name.name, email: Faker::Internet.email, password: "helloworld", password_confirmation: "helloworld")
+user.update_attributes(username: Faker::Name.name, password: "helloworld", password_confirmation: "helloworld")
 user.skip_confirmation!
 user.save
 
