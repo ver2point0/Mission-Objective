@@ -11,10 +11,7 @@
             <td><%= item.name %></td>
             <td>days</td>
             <td>
-               <div class="btn-group">
-                  <button type="button" class="btn btn-success">Complete</button>
-                  <button type="button" class="btn btn-danger">Delete</button>
-               </div>
+               <%= link_to "", [current_user, item], method: :delete, class: " btn btn-success glyphicon glyphicon-ok-sign" %>
             </td>
          </tr>
          <% end %>
