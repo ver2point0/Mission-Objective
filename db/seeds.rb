@@ -23,7 +23,7 @@ require 'faker'
   5.times do
     item = Item.create!(
       user: user,
-      name: Faker::Lorem.sentence)
+      name: Faker::Lorem.word)
     item.update_attribute(:created_at, Time.now - rand(600..606461))
   end
 end
