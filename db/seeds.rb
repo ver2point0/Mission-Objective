@@ -10,9 +10,9 @@ require 'faker'
 # Create users & objectives
 
 5.times do
-  password = Faker::Lorem.characters(8)
+  password = Faker::Internet.password
   user = User.new(
-    username: Faker::Name.name,
+    username: Faker::Name.title,
     email: Faker::Internet.email,
     password: password,
     password_confirmation: password)
@@ -29,8 +29,9 @@ require 'faker'
 end
 
 user = User.first
+user.update_attributes(email: "jmci10@hotmail.com", password: "helloworld", password_confirmation: "helloworld")
 user.skip_confirmation!
-user.update_attributes(username: "Me", email: "jmci10@hotmail.com", password: "helloworld", password_confirmation: "helloworld")
+user.save
 
 puts "Seeds finished"
 puts "#{User.count} users created"
