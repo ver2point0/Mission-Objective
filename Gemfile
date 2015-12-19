@@ -30,6 +30,8 @@ group :development, :test do
   gem 'byebug'
 end
 
+# Use Faker to generate random data
+gem 'faker'
 # Use devise for authentication
 gem 'devise'
 # Use Figaro to store environment variables
