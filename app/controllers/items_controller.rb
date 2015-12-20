@@ -7,13 +7,20 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.build(items_params)
     
+    @new_item = Item.new
+    
     if @item.save
       flash[:notice] = "Objective successfully added."
-      redirect_to user_path(current_user)
+      #redirect_to user_path(current_user)
     else
-      flash[:notice] = "Objective failed to add."
-      redirect_to user_path(current_user)
-    end 
+      flash[:error] = "Objective failed to add."
+      #redirect_to user_path(current_user)
+    end
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
   
   def destroy
@@ -21,10 +28,13 @@ class ItemsController < ApplicationController
     
     if @item.destroy
       flash[:notice] = "Objective successfully completed."
-      redirect_to user_path(current_user)
     else
-      flash[:notice] = "Objective failed to complete."
-      redirect_to user_path(current_user)
+      flash[:error] = "Objective failed to complete."
+    end
+    
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
   
