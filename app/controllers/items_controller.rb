@@ -10,10 +10,10 @@ class ItemsController < ApplicationController
     @new_item = Item.new
     
     if @item.save
-      flash[:notice] = "Objective successfully added."
+      flash.now[:notice] = "Objective successfully added."
       #redirect_to user_path(current_user)
     else
-      flash[:error] = "Objective failed to add."
+      flash.now[:error] = "Objective failed to add."
       #redirect_to user_path(current_user)
     end
     
@@ -27,9 +27,9 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     
     if @item.destroy
-      flash[:notice] = "Objective successfully completed."
+      flash.now[:notice] = "Objective successfully completed."
     else
-      flash[:error] = "Objective failed to complete."
+      flash.now[:error] = "Objective failed to complete."
     end
     
     respond_to do |format|
