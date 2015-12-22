@@ -50,7 +50,7 @@
                         
                         <div class="row">
                             <strong>Current Objectives</strong>
-                            <div class="items">
+                            
                                 <div class="table table-responsive">
                                     <table class="table table-hover">
                                         <thead>
@@ -58,12 +58,12 @@
                                          <th># days left</th>
                                          <th>Objective actions</th>
                                         </thead>
-                                              <tbody>
-                                        <%= render partial: 'items/item' %>
+                                              <tbody class="items">
+                                        <%= render partial: 'items/item', collection: current_user.items %>
                                             </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>

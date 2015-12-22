@@ -1,11 +1,11 @@
-<tr id="item-<%= @item.id %>">
- <% current_user.items.each do |item| %>
+<tr id="item-<%= item.id %>">
+
   <td><%= item.name %></td>
   <td>days</td>
   <td>
      <%= link_to "", [current_user, item], method: :delete, remote: true, class: " btn btn-success glyphicon glyphicon-ok-sign" %>
   </td>
-  <% end %>
+
 </tr>
 
   

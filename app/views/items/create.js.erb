@@ -1,8 +1,9 @@
 <% if @item.valid? %>
    $('.items').append("<%= escape_javascript(render(@item)) %>");
    $('.new-item').html("<%= escape_javascript(render partial: 'items/form', locals: { user: current_user, item: @new_item }) %>");
-   $('.js-items-count').html("<%= pluralize(current_user.items.count, 'Objecitve') %>");
+   $('.js-items-count').html("<%= pluralize(current_user.items.count, 'Objective') %>");
+   $('.flash').html("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:notice] %></div>");
 <% else %>
-   $('.items').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:error] %></div>");
-   $('.new-item').html("<%= escape_javascript(render partial: 'items/form', locals: { user: current_user, item: @item }) %>");
+   $('.flash').html("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash[:error] %></div>");
+   $('.new-item').html("<%= escape_javascript(render partial: 'items/form', locals: { user: current_user, item: @new_item }) %>");
 <% end %>

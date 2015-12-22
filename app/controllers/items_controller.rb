@@ -5,16 +5,14 @@ class ItemsController < ApplicationController
   end
   
   def create
-    @item = current_user.items.build(items_params)
+    @item = current_user.items.new(items_params)
     
     @new_item = Item.new
     
     if @item.save
       flash.now[:notice] = "Objective successfully added."
-      #redirect_to user_path(current_user)
     else
       flash.now[:error] = "Objective failed to add."
-      #redirect_to user_path(current_user)
     end
     
     respond_to do |format|
