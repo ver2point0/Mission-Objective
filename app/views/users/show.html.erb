@@ -20,10 +20,9 @@
                     
                     <strong><p class='js-items-count'><%= pluralize(current_user.items.count, 'Objective') %></p></strong>
                     <p>Complete your weekly objectives using the panel to the right.</p>
-                    <p>1. Type an objecitve name.</p>
+                    <p>1. Type an objective name.</p>
                     <p>2. Press <b>add</b> to add a new objecitve.</p>
                     <p>3. Press <b>complete</b> to mark an objective complete.</p>
-                    <p>4. Press <b>delete</b> to delete an existing objective.</p>
                 </div>
                 
             </div>
@@ -50,12 +49,11 @@
                         
                         <div class="row">
                             <strong>Current Objectives</strong>
-                            
                                 <div class="table table-responsive">
                                     <table class="table table-hover">
                                         <thead>
                                          <th>Description</th>
-                                         <th># days left</th>
+                                         <th>Days left</th>
                                          <th>Objective actions</th>
                                         </thead>
                                               <tbody class="items">
@@ -63,7 +61,6 @@
                                             </tbody>
                                     </table>
                                 </div>
-                            
                         </div>
                     </div>
                 </div>

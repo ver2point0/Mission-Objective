@@ -1,11 +1,7 @@
 <tr id="item-<%= item.id %>">
-
   <td><%= item.name %></td>
-  <td>days</td>
+  <td>created <%= time_ago_in_words(item.created_at) %> ago</td> 
   <td>
-     <%= link_to "", [current_user, item], method: :delete, remote: true, class: " btn btn-success glyphicon glyphicon-ok-sign" %>
+    <%= link_to "Complete", [current_user, item], method: :delete, remote: true, class: "btn btn-success " %>
   </td>
-
 </tr>
-
-  
