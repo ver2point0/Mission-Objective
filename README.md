@@ -1,3 +1,4 @@
+[![ghit.me](https://ghit.me/badge.svg?repo=ver2point0/Mission-Objective)](https://ghit.me/repo/ver2point0/Mission-Objective)
 # Mission Objective
 
 ## Mission brief
