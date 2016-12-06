@@ -8,7 +8,7 @@ If you choose to accept your mission, you will have 7 days to complete each obje
 
 *This message will explode in 3...2...*
 
-## Complete your objectives
+## Complete your objectives!
 
 Follow the link to get started: [Mission Objective](http://mission-objective.herokuapp.com/)
 
