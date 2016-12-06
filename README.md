@@ -10,6 +10,6 @@ If you choose to accept your mission, you will have 7 days to complete each obje
 
 ## Complete your objectives
 
-- [ ] Follow the link to get started: [Mission Objective](http://mission-objective.herokuapp.com/)
+Follow the link to get started: [Mission Objective](http://mission-objective.herokuapp.com/)
 
 [![ghit.me](https://ghit.me/badge.svg?repo=ver2point0/Mission-Objective)](https://ghit.me/repo/ver2point0/Mission-Objective)
